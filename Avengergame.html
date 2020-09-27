@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="eng">
+	<head>
+		<link rel="stylesheet" href='AvengergameCSS.css'>
+			<body>
+			<h2> <strong>Upgrades:</strong></h2>
+			<h1><span id= Score >0</span></h1>
+			<button onclick="Farmer()" type="button" class= "Upgrade1" id='Upgrade2'><strong>Infinity Stones</strong></button>
+		
+				<br>
+			
+			<button onclick="Add()" type="button" class="Score" id="Score"><img src=infinitystones.jpg class='Score'></button>
+
+				<script type="text/javascript">
+					var Score = document.getElementById('Score').innerHTML;
+
+
+					function Add(){
+						var Score = document.getElementById('Score').innerHTML;
+						Score++;
+						document.getElementById('Score').innerHTML = Score;
+						if (Score > 0){
+							var audio = new Audio('Sound1.mp3');
+							audio.play();
+						}
+
+					}
+
+					function Farmer() {
+						var Score = document.getElementById('Score').innerHTML;
+						if(Score >= 10){
+							var Score = (Score - 10)
+							document.getElementById('Score').innerHTML = Score
+
+							
+						}
+						else{
+							alert("je hebt 10 Infinity Stones nodig")
+						}
+					}
+					while (true){
+						var Score = document.getElementById('Score').innerHTML;
+						document.getElementById('Score').innerHTML = Score
+						var Score = (Score + 1);
+						setTimeout(check, 1000);
+
+					}						
+				</script>
+		</body>	
+	</head>
+</html>
